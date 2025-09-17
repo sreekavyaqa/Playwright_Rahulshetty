@@ -6,9 +6,26 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Playwright tutorials",
   "devDependencies": {
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.3.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "playwright": "^1.54.2",
+    "playwright-core": "^1.54.2",
+    "undici-types": "^7.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreekavyaqa/Playwright_Rahulshetty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sreekavyaqa/Playwright_Rahulshetty/issues"
+  },
+  "homepage": "https://github.com/sreekavyaqa/Playwright_Rahulshetty#readme"
 }
