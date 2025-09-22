@@ -2,14 +2,20 @@
   "name": "playwrightautomation",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "regression" : "npx playwright test",
+    "WebTests" : "npx playwright test --config playwright.config1.js --grep @Web",
+    "APITests" : "npx playwright test --grep '@API'",
+    "SafariNewConfig":"npx playwright test --config playwright.config1.js --project=safari"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "Playwright tutorials",
   "devDependencies": {
-    "@playwright/test": "^1.54.2",
-    "@types/node": "^24.3.0"
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "allure-playwright": "^3.4.1"
   },
   "directories": {
     "test": "tests"
