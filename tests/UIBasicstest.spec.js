@@ -16,7 +16,7 @@ await page.locator("[name='password']").fill("learning")
 await signIn.click();
 console.log(await page.locator("[style*='block']").textContent());
 //assertion
-await expect(page.locator("[style*='block']")).toContainText('Incorrect')
+await expect(page.locator("[style*='block']")).toContainText('Incorrect');
 //clear the text box
 await userName.fill("");
 await userName.fill("rahulshettyacademy");

@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "regression" : "npx playwright test",
-    "WebTests" : "npx playwright test --config playwright.config1.js --grep @Web",
-    "APITests" : "npx playwright test --grep '@API'",
-    "SafariNewConfig":"npx playwright test --config playwright.config1.js --project=safari"
+    "regression": "npx playwright test",
+    "WebTests": "npx playwright test --config playwright.config1.js --grep @Web",
+    "APITests": "npx playwright test --grep '@API'",
+    "SafariNewConfig": "npx playwright test --config playwright.config1.js --project=safari",
+    "CucumberRegression": "npx cucumber-js features/ECommerce.feature --tags \"@Regression\" --retry 1 --exit --format html:cucumber-report.html"
+
   },
   "keywords": [],
   "author": "",
@@ -15,12 +17,14 @@
   "devDependencies": {
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.3.0",
-    "allure-playwright": "^3.4.1"
+    "allure-playwright": "^3.4.1",
+    "typescript": "^5.9.2"
   },
   "directories": {
     "test": "tests"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^12.2.0",
     "exceljs": "^4.4.0",
     "playwright": "^1.54.2",
     "playwright-core": "^1.54.2",

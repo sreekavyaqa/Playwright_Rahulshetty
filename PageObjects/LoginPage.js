@@ -1,9 +1,23 @@
 class LoginPage{
 constructor(page){
     this.page=page;
-    this.userEmail=page.locator("#userEmail");
-    this.userPassword=page.locator("#userPassword");
-    this.signInButton=page.locator("[value='Login']");
+        this.usernameInput = page.locator('#username');
+        this.passwordInput = page.locator('#password');
+        this.signInButton = page.locator('#signInBtn');
+        this.userAgreementCheckbox = page.locator('#terms');
+}
+// Select the user agreement checkbox
+async checkUserAgreement() {
+    await this.userAgreementCheckbox.check();
+}
+// Click the sign in button
+async clickSignIn() {
+    await this.signInButton.click();
+}
+// For legacy login page (used in iPhoneXPresence.spec.js)
+async login(username, password) {
+        await this.usernameInput.fill(username);
+        await this.passwordInput.fill(password);
 }
 async goToLoginPage(){
 await this.page.goto("https://rahulshettyacademy.com/client/#/auth/login");

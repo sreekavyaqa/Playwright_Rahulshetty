@@ -1,17 +1,16 @@
-class DashBoardPage{
-  
-    constructor(page){
+    import{ expect, type Locator, type Page } from '@playwright/test';
+export class DashBoardPage{
+    page: Page;
+    products:Locator;
+    productsText:Locator;
+    cart:Locator;
+    constructor(page:Page){
         this.products=page.locator(".card-body");
         this.productsText=page.locator(".card-body b");
         this.cart=page.locator("[routerlink*='cart']");
         this.page=page;
     }
-    // Get all product titles as an array of strings
-    async getProductTitles() {
-        await this.productsText.first().waitFor();
-        return await this.productsText.allTextContents();
-    }
-    async searchProductAddCart(productName){
+    async searchProductAddCart(productName:string){
         
         await this.page.locator(".card-body b").first().waitFor();
         const titles=await this.productsText.allTextContents();

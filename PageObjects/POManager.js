@@ -4,6 +4,7 @@ const {CartPage}=require('./CartPage');
 const {OrdersReviewPage}=require('./OrdersReviewPage');
 const {OrdersDetailPage}=require('./OrdersDetailPage');
 class POManager{
+         
     constructor(page){
         this.page=page;
         this.loginPage=new LoginPage(this.page);
